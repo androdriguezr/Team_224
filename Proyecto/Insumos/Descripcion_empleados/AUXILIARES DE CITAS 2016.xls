@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Zeus Tecnologia S.A</Author>
+  <Created>2022-05-23T21:27:07Z</Created>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>4260</WindowHeight>
+  <WindowWidth>15345</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s16" ss:Name="Millares">
+   <NumberFormat ss:Format="_(* #,##0.00_);_(* \(#,##0.00\);_(* &quot;-&quot;??_);_(@_)"/>
+  </Style>
+  <Style ss:ID="s248" ss:Name="Millares 2">
+   <NumberFormat ss:Format="_(* #,##0.00_);_(* \(#,##0.00\);_(* &quot;-&quot;??_);_(@_)"/>
+  </Style>
+  <Style ss:ID="s247" ss:Name="Normal 2">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s186">
+   <Alignment ss:Vertical="Top"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s208">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s210">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#74BABA" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s212">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#74BABA" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s213">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s215">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s217">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#E7F8F5" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s219">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#E7F8F5" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s239" ss:Parent="s16">
+   <Alignment ss:Vertical="Top"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="_(* #,##0_);_(* \(#,##0\);_(* &quot;-&quot;??_);_(@_)"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s240" ss:Parent="s16">
+   <Alignment ss:Vertical="Top"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="_(* #,##0_);_(* \(#,##0\);_(* &quot;-&quot;??_);_(@_)"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s241" ss:Parent="s16">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#74BABA" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="_(* #,##0_);_(* \(#,##0\);_(* &quot;-&quot;??_);_(@_)"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s242" ss:Parent="s16">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="_(* #,##0_);_(* \(#,##0\);_(* &quot;-&quot;??_);_(@_)"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s243" ss:Parent="s16">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#E7F8F5" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="_(* #,##0_);_(* \(#,##0\);_(* &quot;-&quot;??_);_(@_)"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s244" ss:Parent="s16">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+   <NumberFormat ss:Format="_(* #,##0_);_(* \(#,##0\);_(* &quot;-&quot;??_);_(@_)"/>
+  </Style>
+  <Style ss:ID="s245">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000" ss:Bold="1"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s320" ss:Parent="s247">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s321" ss:Parent="s248">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="_(* #,##0_);_(* \(#,##0\);_(* &quot;-&quot;??_);_(@_)"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s325" ss:Parent="s247">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="Short Date"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s346" ss:Parent="s247">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Color="#000000"/>
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Page1">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="34" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s208" ss:DefaultColumnWidth="80.25">
+   <Column ss:Index="2" ss:StyleID="s208" ss:Width="214.5"/>
+   <Column ss:StyleID="s208" ss:Width="108.75" ss:Span="1"/>
+   <Column ss:Index="5" ss:StyleID="s208" ss:Width="56.25"/>
+   <Column ss:StyleID="s208" ss:Width="237.75"/>
+   <Column ss:StyleID="s244" ss:Width="45.75"/>
+   <Row>
+    <Cell ss:StyleID="s186"><Data ss:Type="String">MEDICINA INTEGRAL S.A.</Data></Cell>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s239"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s186"><Data ss:Type="String">Relación de Empleados</Data></Cell>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s240"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s186"><Data ss:Type="String">Tipo Nomina:  Mensual</Data></Cell>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s239"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s245"><Data ss:Type="Number">2016</Data></Cell>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s186"/>
+    <Cell ss:StyleID="s239"/>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s212"><Data ss:Type="String">Codigo</Data></Cell>
+    <Cell ss:StyleID="s210"><Data ss:Type="String">Nombres</Data></Cell>
+    <Cell ss:StyleID="s212"><Data ss:Type="String">Cargo</Data></Cell>
+    <Cell ss:StyleID="s210"><Data ss:Type="String">Ingreso</Data></Cell>
+    <Cell ss:StyleID="s212"><Data ss:Type="String">Vence</Data></Cell>
+    <Cell ss:StyleID="s212"><Data ss:Type="String">Centro Costo</Data></Cell>
+    <Cell ss:StyleID="s241"><Data ss:Type="String">Sueldo</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">1003408404</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">PEREZ SALGADO JACKELLIN </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2014/06/16 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">CONVENIO NEPS-SAHAGUN                    </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">772000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">1003716527</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">RUBIO CAVADIA ROSA ICELA</Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2016/05/02 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">901 ADMIN MONTERIA                       </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">819000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">1010057975</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">MONTOYA VITAR LINDA LUCIA</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2016/10/01 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">2017/04/03 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">COLSANITA MONTELIBANO                    </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">713000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">1064986894</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">YANCES CABRALES MILDREIS CECILIA</Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2010/08/01 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">801 ADMIN NEPS                           </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">819000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">1065004527</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">DIAZ MONTES DANNY PATRICIA</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2013/06/16 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">2017/07/31 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">901 ADMIN MONTERIA                       </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">819000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">1067851468</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">MONTES SUAREZ MARTHA CECILIA</Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2006/11/16 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">2017/05/17 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">801 ADMIN NEPS                           </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">819000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">1067878169</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">AGUILAR PEREIRA NEIDYS LUZ</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2009/10/01 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">901 ADMIN MONTERIA                       </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">819000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">1067900031</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">OVIEDO GUZMAN CINDY PAOLA</Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2014/09/23 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">2018/11/30 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">901 ADMIN MONTERIA                       </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">713000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">1067908003</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">REYES POLO JULIETH MARCELA</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2015/08/01 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">2019/08/12 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">COLSANITA                                </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">713000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">1067924546</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">PEREZ PEÑA ALEJANDRA MARIA</Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2014/06/03 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">2017/05/19 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">801 ADMIN NEPS                           </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">713000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">1067940146</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">MEZA PEREZ SILVIA JULIETH</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2014/09/01 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">2018/06/30 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">901 ADMIN MONTERIA                       </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">713000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">1067940376</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">ARTEAGA ACOSTA DANIDYS </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2014/09/02 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">901 ADMIN MONTERIA                       </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">713000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">1067946828</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">RAMOS POLO YURIS MARCELA</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2016/07/01 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">2016/09/24 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">901 ADMIN MONTERIA                       </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">699455</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">1067949877</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">TENORIO PEREIRA YARISEL </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2016/11/01 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">COLSANITA                                </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">713000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">1069485574</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">BLANCO GONZALEZ ELENA BEATRIZ</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2014/08/25 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">CONVENIO NEPS-SAHAGUN                    </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">772000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">1110500184</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">MARTINEZ  PETRO ANGELA MARIA</Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2016/11/15 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">2021/05/15 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">CONV. SALUD TOTAL ASISTENCIAL            </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">900000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">1233338327</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">AGUILAR PEREIRA LEONARDO JOSE</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2016/03/01 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">2016/05/30 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">901 ADMIN MONTERIA                       </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">819000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">1069472164</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">MONTES RICARDO ANDRES MAURICIO</Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2015/09/01 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">2018/04/28 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">COLSANITA                                </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">713000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">30569825</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">DE ARCE BULA MARIA EUGENIA</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2012/01/01 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">301 ADMIN SAHAGUN                        </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">772000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">39144315</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">PADILLA ORTIZ VILMA ESTER</Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2011/11/16 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">901 ADMIN MONTERIA                       </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">819000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">45781780</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">MARTINEZ RAMOS IVON PATRICIA</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2014/11/11 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">2019/03/30 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">0804 CONVENIO NEPS-LORICA                </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">772000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">50913548</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">RICARDO RUIZ JUDITH DEL CARMEN</Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2006/11/16 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">801 ADMIN NEPS                           </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">819000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">50920157</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">GONZALEZ VERTEL YENIS PATRICIA</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2011/02/11 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">2019/04/30 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">901 ADMIN MONTERIA                       </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">819000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">50920157</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">GONZALEZ VERTEL YENIS PATRICIA</Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2011/02/11 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">2019/04/30 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">UNIDAD DE APOYO DIAGNOSTICO  MINTEGRA    </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">819000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">50932408</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">VERGARA MERCADO GLENIS DEL CARMEN</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2015/10/01 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">2016/04/01 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">901 ADMIN MONTERIA                       </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">699454</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">50933029</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">GONZALEZ OLIVA SAIDY </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2008/02/04 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">801 ADMIN NEPS                           </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">819000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s215"><Data ss:Type="Number">50945231</Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">GUZMAN LOZANO ERLEIDA YOLINDA</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s213"><Data ss:Type="String">2012/08/01 </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String"> </Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">701 ADMIN MONTELIBANO                    </Data></Cell>
+    <Cell ss:StyleID="s242"><Data ss:Type="Number">713000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s219"><Data ss:Type="Number">63514288</Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">MURILLO PALOMINO YADIS ESTHER</Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">AUXILIAR CITAS </Data></Cell>
+    <Cell ss:StyleID="s217"><Data ss:Type="String">2014/05/02 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">2017/04/07 </Data></Cell>
+    <Cell ss:StyleID="s219"><Data ss:Type="String">113 ADMIN PLANETA RICA                   </Data></Cell>
+    <Cell ss:StyleID="s243"><Data ss:Type="Number">759000</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s346"><Data ss:Type="Number">1064979569</Data></Cell>
+    <Cell ss:StyleID="s320"><Data ss:Type="String">CORONADO HERNANDEZ CARMEN SOFIA</Data></Cell>
+    <Cell ss:StyleID="s346"><Data ss:Type="String">COORDINADOR CITAS</Data></Cell>
+    <Cell ss:StyleID="s325"><Data ss:Type="DateTime">2009-05-01T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s325"><Data ss:Type="DateTime">2020-01-19T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s215"><Data ss:Type="String">901 ADMIN MONTERIA                       </Data></Cell>
+    <Cell ss:StyleID="s321"><Data ss:Type="Number">882000</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <PageMargins x:Bottom="0.3" x:Left="0.19" x:Right="0.19" x:Top="0.3"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <TopRowVisible>39</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>1</ActiveRow>
+     <ActiveCol>3</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
