@@ -9,56 +9,48 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 import numpy as np
-
 import seaborn as sns
-##### import sueldos=====
 
-os.chdir("C:/Users/USUARIO/Documents/GitHub/Team_224/Proyecto/Insumos/Descripcion_empleados")
-
+##### importando los datos de los sueldos #########
+os.chdir("C:/Users/relat/Documents/GitHub/Team_224/Proyecto/Insumos/Descripcion_empleados")
 sendero_sueldos=os.path.join(os.getcwd(),'Sueldos_nomina_consolidados.csv')
-#sendero_sueldos=os.path.join(os.getcwd(),str(os.listdir()[0]))
 sueldos=pd.read_csv(sendero_sueldos,sep=";")
-
-sueldos['year']=sueldos['year'].astype('float64')
-
+#sueldos['year']=sueldos['year'].astype('float64')
 sueldos['Codigo']=sueldos['Codigo'].astype('int').astype('str')
 sueldos.drop_duplicates(['year','Codigo','Nombres'],inplace=True)
-## import features
-os.chdir("C:/Users/USUARIO/Documents/GitHub/Team_224/Proyecto/Insumos/Encuesta_sociodem_empleados")
+
+##### importando los datos de demográficos ##########
+os.chdir("C:/Users/relat/Documents/GitHub/Team_224/Proyecto/Insumos/Encuesta_sociodem_empleados")
 sendero_feature=os.path.join(os.getcwd(),str(os.listdir()[0]))
 feature_demo=pd.read_excel(sendero_feature)
-
-os.chdir("C:/Users/USUARIO/Documents/Dropbox/Mintic/DS4A/Proyecto/Asignacion_citas")
-
-###### arreglando data_features#######
-
 feature_demo.dropna(subset=["NOMBRE_CLAVE"],inplace=True)
 
-##### filtrando y arreglando data huitorica solicitudes======
+###### importando los datos de las actividades   #######
+os.chdir("C:/Users/relat/Documents/GitHub/Team_224/Proyecto/Insumos/Asignacion_citas")
+
 sendero=os.path.join(os.getcwd(),str(os.listdir()[0]))
-data0=pd.read_csv(sendero,encoding='utf-8',sep=';')
+data0=pd.read_excel(sendero, sheet_name='01-09')
+data1=pd.read_excel(sendero, sheet_name='10-12')
 
 sendero=os.path.join(os.getcwd(),str(os.listdir()[1]))
-data1=pd.read_csv(sendero,encoding='utf-8',sep=';')
-
-                 
+data2=pd.read_excel(sendero)
+                
 sendero=os.path.join(os.getcwd(),str(os.listdir()[2]))
-data2=pd.read_csv(sendero,encoding='utf-8',sep=';')
+data3=pd.read_excel(sendero)
                  
 sendero=os.path.join(os.getcwd(),str(os.listdir()[3]))
-data3=pd.read_csv(sendero,encoding='utf-8',sep=';')  
-
-
-sendero=os.path.join(os.getcwd(),str(os.listdir()[4]))
-data4=pd.read_csv(sendero,encoding='utf-8',sep=';')  
-
+data4=pd.read_excel(sendero)  
 
 consol_data=pd.concat([data1,data0,data2,data3,data4])
 
-### arreglando fecha
-consol_data['Fecha']=pd.to_datetime(consol_data['Fecha'],format="%d/%m/%Y",infer_datetime_format=False)
-consol_data['Mes']=consol_data['Fecha'].dt.month
+consol_data = consol_data[['Año', 'MES', 'Fecha', 'ORIGEN', 'PuntoAtencion', 'Contrato',
+       'NOMBRE_USUARIO', 'Tipo', 'Solicitud', 'Autorizacion', 'codigo',
+       'descripcion', 'cantidad']]
 consol_data['year']=consol_data['Fecha'].dt.year
+del consol_data['Año']
+
+###############  Trabajando con el set de datos  #################################
+
 '''descripcion variable. todo debe ser objeto porque ninguno se va a utilizar como float'''
 
 consol_data.info()
@@ -66,30 +58,35 @@ consol_data['Solicitud']=consol_data.Solicitud.astype('str')
 consol_data['Autorizacion']=consol_data.Solicitud.astype('str')
 consol_data['NOMBRE_USUARIO']=consol_data.NOMBRE_USUARIO.str.upper()
 
+# Revisando la data
 consol_data.info()
 estadisticos_iniciales=consol_data.describe(include = ['O'])
 consol_data.shape
 consol_data.dropna(how='all',inplace=True)
 
-### creacin conteo 
+### creacion conteos en la BD de eventos #####################
 
-
-consol_data_solicitudes=consol_data.drop_duplicates(['year','Mes','NOMBRE_USUARIO','Solicitud']).groupby(['year','Mes','NOMBRE_USUARIO'])['Solicitud'].count()
-consol_data_solicitudes.reset_index().sort_values(by=['year','Mes','NOMBRE_USUARIO'])
+consol_data_solicitudes=consol_data.drop_duplicates(['year','MES','NOMBRE_USUARIO','Solicitud']).groupby(['year','MES','NOMBRE_USUARIO'])['Solicitud'].count()
+consol_data_solicitudes.reset_index().sort_values(by=['year','MES','NOMBRE_USUARIO'])
 consol_data_solicitudes=consol_data_solicitudes.reset_index()
 
-consol_data_autorizaciones=consol_data.drop_duplicates(['year','Mes','NOMBRE_USUARIO','Autorizacion']).groupby(['year','Mes','NOMBRE_USUARIO'])['Autorizacion'].count()
-consol_data_autorizaciones.reset_index().sort_values(by=['year','Mes','NOMBRE_USUARIO'],inplace=True)
+consol_data_autorizaciones=consol_data.drop_duplicates(['year','MES','NOMBRE_USUARIO','Autorizacion']).groupby(['year','MES','NOMBRE_USUARIO'])['Autorizacion'].count()
+consol_data_autorizaciones.reset_index().sort_values(by=['year','MES','NOMBRE_USUARIO'],inplace=True)
 consol_data_autorizaciones=consol_data_autorizaciones.reset_index()
 
-consol_data_codigo=consol_data.drop_duplicates(['year','Mes','NOMBRE_USUARIO','codigo']).groupby(['year','Mes','NOMBRE_USUARIO'])['codigo'].count()
-consol_data_codigo.reset_index().sort_values(by=['year','Mes','NOMBRE_USUARIO'],inplace=True)
+consol_data_codigo=consol_data.drop_duplicates(['year','MES','NOMBRE_USUARIO','codigo']).groupby(['year','MES','NOMBRE_USUARIO'])['codigo'].count()
+consol_data_codigo.reset_index().sort_values(by=['year','MES','NOMBRE_USUARIO'],inplace=True)
 consol_data_codigo=consol_data_codigo.reset_index()
 
-#####unir con dataframe de features_demograficos
+##### unir con el DF de features_demograficos #####################
 
 ## la siguiente linea, permite verificar el A-B de dos grupos de Strings
 set(feature_demo.NOMBRE_CLAVE.unique())-set(consol_data_solicitudes.NOMBRE_USUARIO.unique())
+
+
+
+
+
 
 feature_demo['NUMERO_DE_DOCUMENTO']=feature_demo.NUMERO_DE_DOCUMENTO.astype('int').astype('str').str.strip()
 consol_data_con_features=feature_demo.merge(consol_data_solicitudes,how='left',left_on='NOMBRE_CLAVE',right_on='NOMBRE_USUARIO',)
