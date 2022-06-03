@@ -116,7 +116,7 @@ sm.graphics.plot_corr(corr, xnames=list(corr.columns))
 plt.show()
 
 
-## grafica
+## graficas de visualizacion
 
 plt.figure(figsize=(8,9))
 
