@@ -15,7 +15,7 @@ import math
 import unicodedata
 from unicodedata import normalize
 import re
-
+from dateutil.relativedelta import relativedelta
 ##### organizando rutas #########
 
 ruta_madre="C:/Users/USUARIO/Documents/GitHub/Team_224/Proyecto"
@@ -111,11 +111,34 @@ for i in range(len(data_agregada['MUNICIPIO_DE_RESIDENCIA'])):
     
     
 data_agregada['MUNICIPIO_DE_RESIDENCIA']=prueba ## se le quita las tildes
-###numero de hijos
+
+### normalizar las solicitudes###
+
+## que quede solicitudes, autorizaciones por dia
+
+data_agregada['fecha_fin']=pd.to_datetime([data_agregada['fecha_analisis'][j]+relativedelta(months=1) for j in range(len(data_agregada['fecha_analisis']))])
+data_agregada['dias_mes']=data_agregada['fecha_fin']-data_agregada['fecha_analisis']
+data_agregada['dias_mes']=data_agregada['dias_mes'].dt.days
+data_agregada['solicitudes_per_day']=data_agregada['Solicitud']/data_agregada['dias_mes']
+data_agregada['autorizaciones_per_day']=data_agregada['Autorizacion']/data_agregada['dias_mes']
+data_agregada['codigos_per_day']=data_agregada['codigo']/data_agregada['dias_mes']
 
 
+###profesion##
 
+data_agregada['PROFESION']=data_agregada['PROFESION'].str.lower()
 
+prueba=[]
+for i in range(len(data_agregada['PROFESION'])):
+    
+    try:
+        prueba.append(normalizar(data_agregada['PROFESION'][i]))
+    except:
+        
+        prueba.append(np.nan)
+   
+    
+data_agregada['PROFESION']=prueba
 #data_agregada['edad']=
 
 ###### Exploratoy Data Analysis#######
