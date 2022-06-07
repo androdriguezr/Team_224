@@ -18,7 +18,7 @@ import re
 from dateutil.relativedelta import relativedelta
 ##### organizando rutas #########
 
-ruta_madre="C:/Users/USUARIO/Documents/GitHub/Team_224/Proyecto"
+ruta_madre="C:/Users/relat/Documents/GitHub/Team_224/Proyecto"
 ruta_insumos=os.path.join(ruta_madre, 'Insumos')
 ruta_resultados=os.path.join(ruta_madre, 'Resultados')
 
@@ -148,7 +148,7 @@ data_agregada.info() ## la variables provenientes de los sueldos año a año, ti
 
 ## describe
 data_agg_describe_numeric=data_agregada.describe()
-data_agg_describe_obbject=data_agregada.describe(include=['O'])
+data_agg_describe_object=data_agregada.describe(include=['O'])
 
 #### grafica de correlacion
 corr = data_agregada.corr()
@@ -164,8 +164,76 @@ plt.figure(figsize=(8,9))
 sns.barplot(x='year',y='Solicitud',data=data_agregada)
 
 ## solicitudes per capita atendias por year
-suma_solicitudes=data_agregada.groupby('year').agg({'Solicitud': ['sum'], 'NOMBRE_CLAVE': 'count'}).reset_index()
+suma_solicitudes=data_agregada.groupby('year').agg({'Solicitud': 'sum', 'NOMBRE_USUARIO': 'count'}).reset_index()
+suma_solicitudes['prod_per_capita']=suma_solicitudes.Solicitud/suma_solicitudes.NOMBRE_USUARIO
+sns.barplot(x='year',y='prod_per_capita',data=suma_solicitudes)
 
-suma_solicitudes['prod_per_capita']=suma_solicitudes.Solicitud/suma_solicitudes.NOMBRE_CLAVE
 
-sns.barplot(x='year',y='Solicitud',data=data_agregada)
+#######################################################################
+
+# Análisis
+
+# Se presentaton mayor número de solicitudes en el año 2016 y 2017, se ha venido disminuyendo con la puntuación más 
+# baja en el 2020 esto se puede deber a impacto al COVID - 19
+
+# La cantidad de solicitudes atendidas por Gestores de citas tiene un comportamiento similar al número de número de
+# solicitudes, se presenta un incremento en el año 2016 y 2017.
+
+
+
+## solicitudes per capita atendias por genero
+suma_solicitudes_Genero =data_agregada.groupby(['year','GENERO']).agg({'Solicitud': 'sum', 'NOMBRE_USUARIO': 'count'}).reset_index()
+suma_solicitudes_Genero['prod_per_capita']=suma_solicitudes_Genero.Solicitud/suma_solicitudes_Genero.NOMBRE_USUARIO
+sns.barplot(x='year',y='prod_per_capita',hue='GENERO',data=suma_solicitudes_Genero)
+
+#######################################################################
+
+# Análisis
+
+# En general se observa que la atención de solicitudes presentan un mayor rendimiento en los hombres en
+# comparación con las mujeres.
+
+
+
+## solicitudes per capita atendias por edad
+suma_solicitudes_Edad =data_agregada.groupby(['edad']).agg({'Solicitud': 'sum', 'NOMBRE_USUARIO': 'count'}).reset_index()
+suma_solicitudes_Edad['prod_per_capita']=suma_solicitudes_Edad.Solicitud/suma_solicitudes_Edad.NOMBRE_USUARIO
+sns.barplot(x='edad',y='prod_per_capita',data=suma_solicitudes_Edad)
+
+#######################################################################
+
+# Análisis
+
+# En general se observa que la atención de solicitudes presentan un mayor rendimiento en los hombres entre 
+# el año 2016 y el 2020 en comparación con las mujeres. Sin embargo, se observa un incremento apartir del año 2021 
+# y en lo que va corriendo del 2022.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
