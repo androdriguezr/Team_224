@@ -18,7 +18,8 @@ import re
 from dateutil.relativedelta import relativedelta
 ##### organizando rutas #########
 
-ruta_madre="C:/Users/relat/Documents/GitHub/Team_224/Proyecto"
+#ruta_madre="C:/Users/relat/Documents/GitHub/Team_224/Proyecto"
+ruta_madre="C:/Users/USUARIO/Documents/GitHub/Team_224/Proyecto"
 ruta_insumos=os.path.join(ruta_madre, 'Insumos')
 ruta_resultados=os.path.join(ruta_madre, 'Resultados')
 
@@ -114,7 +115,7 @@ data_agregada['MUNICIPIO_DE_RESIDENCIA']=prueba ## se le quita las tildes
 
 ### normalizar las solicitudes###
 
-## que quede solicitudes, autorizaciones por dia
+## que quede solicitudes, autorizaciones por dia para evitar el sesgo por mayores dias en un mes
 
 data_agregada['fecha_fin']=pd.to_datetime([data_agregada['fecha_analisis'][j]+relativedelta(months=1) for j in range(len(data_agregada['fecha_analisis']))])
 data_agregada['dias_mes']=data_agregada['fecha_fin']-data_agregada['fecha_analisis']
@@ -139,20 +140,59 @@ for i in range(len(data_agregada['PROFESION'])):
    
     
 data_agregada['PROFESION']=prueba
-#data_agregada['edad']=
+
+profesiones={'administracion de empresas':'admin_empresas',
+             'administrador en servicios de la salud':'admin_servicios_salud',
+             'secretaria':'secretariado',
+             'asistente administrativo':'asistente_administrativo',
+             'tecnico en auxiliar de enfermeria':'auxiliar_enfermeria',
+             'auxiliar de enfermeria':'auxiliar_enfermeria',
+             'tecnico auxiliar de enfermera':'auxiliar_enfermeria',
+             'tecnico auxiliar de enfemeria':'auxiliar_enfermeria',
+             'tecnico en agente  call center':'agente_call_center',
+             'tecnico agente de contact center':'agente_call_center',
+             'administrador en salud':'admin_servicios_salud',
+             'administracion en salud':'admin_servicios_salud',
+             'administrador de empresas':'admin_empresas',
+             'tecnico en asistencia administrativa':'asistente_administrativo'
+             }
+
+data_agregada['PROFESION']=data_agregada['PROFESION'].replace(profesiones)
+
+#### arreglando NIVEL ESCOLARIDAD###############
+
+prueba=[]
+for i in range(len(data_agregada['NIVEL_DE_ESCOLARIDAD'])):
+    
+    try:
+        prueba.append(normalizar(data_agregada['NIVEL_DE_ESCOLARIDAD'][i]))
+    except:
+        
+        prueba.append(np.nan)
+   
+  
+data_agregada['NIVEL_DE_ESCOLARIDAD']=prueba
+
 
 ###### Exploratoy Data Analysis#######
 
 ## info general
 data_agregada.info() ## la variables provenientes de los sueldos año a año, tienen cerca del 56% de la data dañada por falta de info de sueldos en ciertos años, 
 
-## describe
+## describe las variables numericas y categoricas
 data_agg_describe_numeric=data_agregada.describe()
 data_agg_describe_object=data_agregada.describe(include=['O'])
 
+
+# 
+# ax=sns.heatmap(corr_data, annot=True, cmap=sns.cubehelix_palette(20,  light=0.95, dark=0.15))
+# ax.xaxis.tick_top
+# plt.show()
 #### grafica de correlacion
+plt.figure(figsize=(12,10))
 corr = data_agregada.corr()
-sm.graphics.plot_corr(corr, xnames=list(corr.columns))
+ax=sns.heatmap(corr, annot=False, cmap=sns.cubehelix_palette(20,  light=0.95, dark=0.15))
+ax.xaxis.tick_top
 plt.show()
 
 
@@ -161,7 +201,8 @@ plt.show()
 plt.figure(figsize=(8,9))
 
 ## solicitud atendidas por year
-sns.barplot(x='year',y='Solicitud',data=data_agregada)
+sns.lineplot(x='year',y='Solicitud',data=data_agregada)
+
 
 ## solicitudes per capita atendias por year
 suma_solicitudes=data_agregada.groupby('year').agg({'Solicitud': 'sum', 'NOMBRE_USUARIO': 'count'}).reset_index()
@@ -192,14 +233,50 @@ sns.barplot(x='year',y='prod_per_capita',hue='GENERO',data=suma_solicitudes_Gene
 
 # En general se observa que la atención de solicitudes presentan un mayor rendimiento en los hombres en
 # comparación con las mujeres.
+## Por otro lado, al parecer las mujeres tecnologas lo hacen mejor, mientras que los hombres profesionales lo hacen mejor. aunque hay que mencionar
+# que podemos tener patrones escondidos.
 
 
+sns.boxplot(x='GENERO',y='solicitudes_per_day',hue='NIVEL_DE_ESCOLARIDAD',data=data_agregada)
+sns.boxplot(x='GENERO',y='solicitudes_per_day',data=data_agregada)
+data_agregada.groupby('GENERO')['NIVEL_DE_ESCOLARIDAD'].value_counts()
+#######################################################################
+
+# Análisis
+
+# En general se observa que la atención de solicitudes presentan un mayor rendimiento en los hombres en
+# comparación con las mujeres.
 
 ## solicitudes per capita atendias por edad
 suma_solicitudes_Edad =data_agregada.groupby(['edad']).agg({'Solicitud': 'sum', 'NOMBRE_USUARIO': 'count'}).reset_index()
 suma_solicitudes_Edad['prod_per_capita']=suma_solicitudes_Edad.Solicitud/suma_solicitudes_Edad.NOMBRE_USUARIO
+plt.xticks(rotation=90)
 sns.barplot(x='edad',y='prod_per_capita',data=suma_solicitudes_Edad)
 
+#######################################################################
+
+# Análisis
+
+# Parece no haber una relacion importante entre años de experiencia, edad y solicitudes por dia
+
+sns.scatterplot(x='years_antiguedad',y='solicitudes_per_day',hue='GENERO',data=data_agregada)
+#plt.title('años de antiguedad vs solicitudes por dia')
+sns.scatterplot(x='edad',y='solicitudes_per_day',hue='GENERO',data=data_agregada)
+
+
+#######################################################################
+
+# Análisis
+
+# Aunque el ESTADO CIVIL dice que las persones en union libres tienden a ser menos aptas para procesar autorizaciones, lo que si se 
+#observa es que entre mayores personas a cargo, hay una relacion cuadratica negativa con punto de inflexión en 3 personas
+
+sns.boxplot(x='ESTADO_CIVIL',y='solicitudes_per_day',data=data_agregada)
+#plt.title('años de antiguedad vs solicitudes por dia')
+sns.boxplot(x='ESTRATO_SOCIAL',y='solicitudes_per_day',data=data_agregada)
+sns.boxplot(x='OTRAS_PERSONAS_A_CARGO',y='solicitudes_per_day',data=data_agregada)
+sns.boxplot(x='TIPO_DE_VIVIENDA',y='solicitudes_per_day',data=data_agregada)
+sns.boxplot(x='CENTRO_DE_TRABAJO',y='solicitudes_per_day',data=data_agregada)
 #######################################################################
 
 # Análisis
