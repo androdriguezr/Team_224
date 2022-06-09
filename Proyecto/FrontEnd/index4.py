@@ -51,7 +51,7 @@ app.layout = html.Div(
 
 
 
-'''
+
 # PLACE THE COMPONENTS IN THE LAYOUT
 app.layout = html.Div(
     [
@@ -194,7 +194,7 @@ def click_saver(clickData, state):
     state.append(clickData["points"][0]["location"])
 
     return state
-'''
+
 
 if __name__ == "__main__":
     app.run_server(host="0.0.0.0", port="8050", debug=True)
