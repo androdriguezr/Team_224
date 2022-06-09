@@ -4,6 +4,8 @@ Created on Thu May 26 18:38:33 2022
 
 @author: USUARIO
 """
+
+#conda update -n base -c defaults conda
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -16,6 +18,12 @@ import unicodedata
 from unicodedata import normalize
 import re
 from dateutil.relativedelta import relativedelta
+import pingouin
+import sklearn
+from sklearn.impute import IterativeImputer
+from sklearn.impute import KNNImputer
+import scipy
+from scipy.stats import chi2_contingency
 ##### organizando rutas #########
 
 #ruta_madre="C:/Users/relat/Documents/GitHub/Team_224/Proyecto"
@@ -235,11 +243,27 @@ sns.barplot(x='year',y='prod_per_capita',hue='GENERO',data=suma_solicitudes_Gene
 # comparación con las mujeres.
 ## Por otro lado, al parecer las mujeres tecnologas lo hacen mejor, mientras que los hombres profesionales lo hacen mejor. aunque hay que mencionar
 # que podemos tener patrones escondidos.
-
+## del mismo modo al realizar una prueba de diferencia de medias, se observa queefectivamente las solicitudes por dia de los hombres es mas grand que el de las mujeres
+## sin embargo, debido al sesgo de la medida, es posible que la prueba pueda dar resultados no tan creibles
 
 sns.boxplot(x='GENERO',y='solicitudes_per_day',hue='NIVEL_DE_ESCOLARIDAD',data=data_agregada)
 sns.boxplot(x='GENERO',y='solicitudes_per_day',data=data_agregada)
 data_agregada.groupby('GENERO')['NIVEL_DE_ESCOLARIDAD'].value_counts()
+
+pingouin.ttest(data_agregada[data_agregada.GENERO=='MASCULINO']['solicitudes_per_day'], data_agregada[data_agregada.GENERO=='FEMENINO']['solicitudes_per_day'],alternative='greater').iloc[0]
+
+pingouin.qqplot(data_agregada[data_agregada.GENERO=='MASCULINO']['solicitudes_per_day'],'norm')
+pingouin.qqplot(data_agregada[data_agregada.GENERO=='FEMENINO']['solicitudes_per_day'],'norm')
+
+#######################################################################
+
+# Análisis
+
+# Notará que aunque la historia general muestra un mejor desempeño de lso hombres, si se segmenta por 
+# año se puede ver que esto no sucede en los últimos años y que la tendencia se devuelve
+
+
+sns.boxplot(hue='GENERO',x='year',y='solicitudes_per_day',data=data_agregada)
 #######################################################################
 
 # Análisis
@@ -285,17 +309,69 @@ sns.boxplot(x='CENTRO_DE_TRABAJO',y='solicitudes_per_day',data=data_agregada)
 # el año 2016 y el 2020 en comparación con las mujeres. Sin embargo, se observa un incremento apartir del año 2021 
 # y en lo que va corriendo del 2022.
 
+#######################################################################
+
+#######################################################################
+
+# Análisis
+
+# En general se observa que la atención de solicitudes presentan un mayor rendimiento en los hombres entre 
+# el año 2016 y el 2020 en comparación con las mujeres. Sin embargo, se observa un incremento apartir del año 2021 
+# y en lo que va corriendo del 2022.
+
+######################################################
+
+# Análisis
+
+# Las personas con mayor nivel educativo que se encuentran en este cargo, viven en arriendo en su mayoria. puede ser que
+#los altos niveles de endeudamiento por recurrir a un profesional y una remuneracion estandar, no les permita tener vivienda propia
+
+prof_tipovi=pd.crosstab(data_agregada['NIVEL_DE_ESCOLARIDAD'],data_agregada['TIPO_DE_VIVIENDA'])
+chi2_contingency(prof_tipovi)[1] 
+
+######################################################
+
+# Análisis
+
+# Tambien se observa que las personas condiciones especiales, tienden a ser excluidas y no pueden formarse profesionalmente
+## tambien hay una relacion importante entre ambas variables
+prof_esp=pd.crosstab(data_agregada['NIVEL_DE_ESCOLARIDAD'],data_agregada['POBLACION_ESPECIAL'])
+sns.heatmap(pd.crosstab(data_agregada['NIVEL_DE_ESCOLARIDAD'],data_agregada['POBLACION_ESPECIAL'],normalize='index'),cmap="Reds")
+chi2_contingency(prof_esp)[1]
 
 
+######################################################
+
+# Análisis
+
+# importante relacipn entre las personas profesionales y su nivel dde estrato socioeconomico
+prof_ESTRATO=pd.crosstab(data_agregada['NIVEL_DE_ESCOLARIDAD'],data_agregada['ESTRATO_SOCIAL'])
+sns.heatmap(pd.crosstab(data_agregada['NIVEL_DE_ESCOLARIDAD'],data_agregada['ESTRATO_SOCIAL'],normalize='columns'),cmap="Reds")
+chi2_contingency(prof_ESTRATO)[1]
 
 
+######################################################
+
+# Análisis
+
+# Debido a que los sueldos tienen una varianza relativamente baja y no se diferenica significativamente entre hombres y mujeres, 
+## se hace una iputaciond e los valores faltantes
+
+sns.kdeplot(x='Sueldo',hue='year',data=data_agregada,fill=True, common_norm=False, palette="crest",
+  alpha=.5, linewidth=0
+  )
+
+sns.boxplot(y='Sueldo',x='year',hue='GENERO',data=data_agregada)
+
+sns.boxplot(y='Sueldo',x='GENERO',data=data_agregada)
 
 
+####imputacion de datos==========
 
+imputer = KNNImputer( weights="uniform")
+nueva_data=pd.DataFrame(imputer.fit_transform(data_agregada[['year','Sueldo']]),columns=['year','Sueldo_imputed'])
 
-
-
-
+data_agregada['Sueldo_imputed']=nueva_data['Sueldo_imputed']
 
 
 
