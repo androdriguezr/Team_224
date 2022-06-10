@@ -20,7 +20,7 @@ import re
 from dateutil.relativedelta import relativedelta
 import pingouin
 import sklearn
-from sklearn.impute import IterativeImputer
+#from sklearn.impute import IterativeImputer
 from sklearn.impute import KNNImputer
 import scipy
 from scipy.stats import chi2_contingency
