@@ -1,0 +1,11 @@
+
+pandas
+matplotlib
+pandas
+seaborn
+statsmodels
+scipy
+datetime
+scikit-learn
+unicodedata
+pingouin
