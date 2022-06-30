@@ -7320,3 +7320,192 @@ AttributeError: 'OptunaSearchCV' object has no attribute 'cv_results_'
                                                  warm_start=False)]],
          verbose=False)
 2022-06-28 23:35:45,769:INFO:save_model() successfully completed......................................
+2022-06-29 21:28:53,014:INFO:PyCaret Supervised Module
+2022-06-29 21:28:53,014:INFO:ML Usecase: regression
+2022-06-29 21:28:53,014:INFO:version 2.3.10
+2022-06-29 21:28:53,015:INFO:Initializing setup()
+2022-06-29 21:28:53,015:INFO:setup(target=request_attend_per_day, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree', 'residuals_interactive': 'Interactive Residuals'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=['gender', 'is_special_population', 'any_disability', 'MUNICIPIO_DE_RESIDENCIA', 'home_type', 'education_level', 'marital_status', 'PROFESION', 'total_depedants', 'ESTRATO_SOCIAL'], categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=True, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=True, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=True, multicollinearity_threshold=0.85, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=True, feature_selection_threshold=0.85, feature_selection_method=classic, feature_interaction=True, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=True, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=1229, log_experiment=False, experiment_name=None, experiment_custom_tags=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-06-29 21:28:53,015:INFO:Checking environment
+2022-06-29 21:28:53,015:INFO:python_version: 3.7.9
+2022-06-29 21:28:53,015:INFO:python_build: ('tags/v3.7.9:13c94747c7', 'Aug 17 2020 18:58:18')
+2022-06-29 21:28:53,015:INFO:machine: AMD64
+2022-06-29 21:28:53,015:INFO:platform: Windows-10-10.0.19041-SP0
+2022-06-29 21:28:53,016:INFO:Memory: svmem(total=29953191936, available=18380513280, percent=38.6, used=11572678656, free=18380513280)
+2022-06-29 21:28:53,016:INFO:Physical Core: 6
+2022-06-29 21:28:53,016:INFO:Logical Core: 12
+2022-06-29 21:28:53,016:INFO:Checking libraries
+2022-06-29 21:28:53,016:INFO:pd==1.3.5
+2022-06-29 21:28:53,016:INFO:numpy==1.19.5
+2022-06-29 21:28:53,016:INFO:sklearn==0.23.2
+2022-06-29 21:28:53,016:INFO:lightgbm==3.3.2
+2022-06-29 21:28:53,247:INFO:catboost==1.0.6
+2022-06-29 21:28:53,247:INFO:xgboost==1.6.1
+2022-06-29 21:28:53,247:INFO:mlflow==1.26.1
+2022-06-29 21:28:53,247:INFO:Checking Exceptions
+2022-06-29 21:28:53,247:INFO:Declaring global variables
+2022-06-29 21:28:53,247:INFO:USI: 8b8f
+2022-06-29 21:28:53,247:INFO:pycaret_globals: {'imputation_regressor', 'logging_param', 'fold_groups_param', 'fold_groups_param_full', 'imputation_classifier', 'experiment__', 'stratify_param', 'display_container', 'target_param', 'log_plots_param', 'n_jobs_param', 'master_model_container', '_internal_pipeline', '_all_models', 'fold_generator', 'fix_imbalance_param', 'fix_imbalance_method_param', 'y', '_available_plots', '_all_models_internal', 'seed', '_ml_usecase', 'USI', '_all_metrics', 'y_test', 'X_train', 'X', 'y_train', 'transform_target_method_param', 'iterative_imputation_iters_param', 'gpu_param', 'create_model_container', 'fold_param', 'exp_name_log', 'X_test', 'pycaret_globals', 'data_before_preprocess', 'html_param', 'dashboard_logger', 'prep_pipe', 'transform_target_param', '_gpu_n_jobs_param', 'fold_shuffle_param'}
+2022-06-29 21:28:53,248:INFO:Preparing display monitor
+2022-06-29 21:28:53,248:INFO:Preparing display monitor
+2022-06-29 21:28:53,256:INFO:Importing libraries
+2022-06-29 21:28:53,256:INFO:Copying data for preprocessing
+2022-06-29 21:28:53,261:INFO:Declaring preprocessing parameters
+2022-06-29 21:28:53,262:INFO:Creating preprocessing pipeline
+2022-06-29 21:28:53,269:INFO:Preprocessing pipeline created successfully
+2022-06-29 21:28:53,269:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-06-29 21:28:53,269:INFO:Creating global containers
+2022-06-29 21:28:53,273:INFO:Internal pipeline: Pipeline(memory=None, steps=[('empty_step', 'passthrough')], verbose=False)
+2022-06-29 21:28:56,481:INFO:Creating grid variables
+2022-06-29 21:28:56,490:INFO:create_model_container: 0
+2022-06-29 21:28:56,490:INFO:master_model_container: 0
+2022-06-29 21:28:56,490:INFO:display_container: 1
+2022-06-29 21:28:56,494:INFO:Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['gender',
+                                                            'is_special_population',
+                                                            'any_disability',
+                                                            'MUNICIPIO_DE_RESIDENCIA',
+                                                            'home_type',
+                                                            'education_level',
+                                                            'marital_status',
+                                                            'PROFESION',
+                                                            'total_depedants',
+                                                            'ESTRATO_SOCIAL'],
+                                      display_types=True, features_todrop=[],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[],...
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       correlation_with_target_threshold=0.0,
+                                       target_variable='request_attend_per_day',
+                                       threshold=0.85)),
+                ('dfs',
+                 DFS_Classic(interactions=['multiply'], ml_usecase='regression',
+                             n_jobs=-1, random_state=1229, subclass='binary',
+                             target='request_attend_per_day',
+                             top_features_to_pick_percentage=None)),
+                ('pca', 'passthrough')],
+         verbose=False)
+2022-06-29 21:28:56,495:INFO:setup() succesfully completed......................................
+2022-06-29 21:30:59,728:INFO:Initializing load_model()
+2022-06-29 21:30:59,728:INFO:load_model(model_name=model_selected_pipeline, platform=None, authentication=None, verbose=True)
+2022-06-29 21:31:21,629:INFO:Initializing load_model()
+2022-06-29 21:31:21,629:INFO:load_model(model_name=model_selected_pipeline, platform=None, authentication=None, verbose=True)
+2022-06-29 21:33:51,923:INFO:Initializing predict_model()
+2022-06-29 21:33:51,923:INFO:predict_model(estimator=Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['gender',
+                                                            'is_special_population',
+                                                            'any_disability',
+                                                            'MUNICIPIO_DE_RESIDENCIA',
+                                                            'home_type',
+                                                            'education_level',
+                                                            'marital_status',
+                                                            'PROFESION',
+                                                            'total_depedants',
+                                                            'ESTRATO_SOCIAL'],
+                                      display_types=True, features_todrop=[],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[],...
+                                                                               ccp_alpha=0.0,
+                                                                               criterion='mse',
+                                                                               max_depth=None,
+                                                                               max_features='auto',
+                                                                               max_leaf_nodes=None,
+                                                                               max_samples=None,
+                                                                               min_impurity_decrease=0.0,
+                                                                               min_impurity_split=None,
+                                                                               min_samples_leaf=1,
+                                                                               min_samples_split=2,
+                                                                               min_weight_fraction_leaf=0.0,
+                                                                               n_estimators=100,
+                                                                               n_jobs=-1,
+                                                                               oob_score=False,
+                                                                               random_state=1229,
+                                                                               verbose=0,
+                                                                               warm_start=False),
+                                                 verbose=0,
+                                                 warm_start=False)]],
+         verbose=False), probability_threshold=None, encoded_labels=True, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None, drift_kwargs=None)
+2022-06-29 21:33:51,923:INFO:Checking exceptions
+2022-06-29 21:33:51,923:INFO:Preloading libraries
+2022-06-29 21:33:51,923:INFO:Preparing display monitor
+2022-06-29 21:38:55,778:INFO:Initializing predict_model()
+2022-06-29 21:38:55,778:INFO:predict_model(estimator=Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['gender',
+                                                            'is_special_population',
+                                                            'any_disability',
+                                                            'MUNICIPIO_DE_RESIDENCIA',
+                                                            'home_type',
+                                                            'education_level',
+                                                            'marital_status',
+                                                            'PROFESION',
+                                                            'total_depedants',
+                                                            'ESTRATO_SOCIAL'],
+                                      display_types=True, features_todrop=[],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[],...
+                                                                               ccp_alpha=0.0,
+                                                                               criterion='mse',
+                                                                               max_depth=None,
+                                                                               max_features='auto',
+                                                                               max_leaf_nodes=None,
+                                                                               max_samples=None,
+                                                                               min_impurity_decrease=0.0,
+                                                                               min_impurity_split=None,
+                                                                               min_samples_leaf=1,
+                                                                               min_samples_split=2,
+                                                                               min_weight_fraction_leaf=0.0,
+                                                                               n_estimators=100,
+                                                                               n_jobs=-1,
+                                                                               oob_score=False,
+                                                                               random_state=1229,
+                                                                               verbose=0,
+                                                                               warm_start=False),
+                                                 verbose=0,
+                                                 warm_start=False)]],
+         verbose=False), probability_threshold=None, encoded_labels=True, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None, drift_kwargs=None)
+2022-06-29 21:38:55,778:INFO:Checking exceptions
+2022-06-29 21:38:55,778:INFO:Preloading libraries
+2022-06-29 21:38:55,778:INFO:Preparing display monitor
+2022-06-29 21:48:02,247:INFO:Initializing predict_model()
+2022-06-29 21:48:02,248:INFO:predict_model(estimator=Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['gender',
+                                                            'is_special_population',
+                                                            'any_disability',
+                                                            'MUNICIPIO_DE_RESIDENCIA',
+                                                            'home_type',
+                                                            'education_level',
+                                                            'marital_status',
+                                                            'PROFESION',
+                                                            'total_depedants',
+                                                            'ESTRATO_SOCIAL'],
+                                      display_types=True, features_todrop=[],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[],...
+                                                                               ccp_alpha=0.0,
+                                                                               criterion='mse',
+                                                                               max_depth=None,
+                                                                               max_features='auto',
+                                                                               max_leaf_nodes=None,
+                                                                               max_samples=None,
+                                                                               min_impurity_decrease=0.0,
+                                                                               min_impurity_split=None,
+                                                                               min_samples_leaf=1,
+                                                                               min_samples_split=2,
+                                                                               min_weight_fraction_leaf=0.0,
+                                                                               n_estimators=100,
+                                                                               n_jobs=-1,
+                                                                               oob_score=False,
+                                                                               random_state=1229,
+                                                                               verbose=0,
+                                                                               warm_start=False),
+                                                 verbose=0,
+                                                 warm_start=False)]],
+         verbose=False), probability_threshold=None, encoded_labels=True, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None, drift_kwargs=None)
+2022-06-29 21:48:02,248:INFO:Checking exceptions
+2022-06-29 21:48:02,248:INFO:Preloading libraries
+2022-06-29 21:48:02,248:INFO:Preparing display monitor
+2022-06-29 22:01:49,006:INFO:Initializing load_model()
+2022-06-29 22:01:49,006:INFO:load_model(model_name=C:\Users\USUARIO\Documents\GitHub\Team_224\Proyecto\Models\model_selected_pipeline, platform=None, authentication=None, verbose=True)
