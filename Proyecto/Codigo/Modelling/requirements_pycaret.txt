@@ -32,3 +32,5 @@ sklearn
 pingouin
 statsmodels
 openpyxl
+optuna
+xgboost
