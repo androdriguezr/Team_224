@@ -1,0 +1,517 @@
+2022-07-01 09:58:15,109:INFO:Initializing load_config()
+2022-07-01 09:58:15,109:INFO:load_config(file_name=C:\Users\USUARIO\Documents\GitHub\Team_224\Proyecto\Models\model_selected_config)
+2022-07-01 09:58:15,125:INFO:Global variables loaded from C:\Users\USUARIO\Documents\GitHub\Team_224\Proyecto\Models\model_selected_config
+2022-07-01 09:58:15,125:INFO:Global variables set to match those in C:\Users\USUARIO\Documents\GitHub\Team_224\Proyecto\Models\model_selected_config
+2022-07-01 09:58:15,125:INFO:load_config() succesfully completed......................................
+2022-07-01 09:58:17,010:INFO:Initializing load_model()
+2022-07-01 09:58:17,010:INFO:load_model(model_name=C:\Users\USUARIO\Documents\GitHub\Team_224\Proyecto\Models\model_selected_pipeline, platform=None, authentication=None, verbose=True)
+2022-07-01 09:58:56,805:INFO:Initializing interpret_model()
+2022-07-01 09:58:56,806:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=age, kwargs={}, observation=None, plot=correlation, save=False)
+2022-07-01 09:58:56,806:INFO:Checking exceptions
+2022-07-01 09:58:56,995:INFO:plot type: correlation
+2022-07-01 09:58:56,995:WARNING:feature value passed. Feature used for correlation plot: age
+2022-07-01 09:58:56,995:INFO:Creating TreeExplainer
+2022-07-01 09:58:56,995:INFO:Compiling shap values
+2022-07-01 09:59:28,266:INFO:model type detected: type 2
+2022-07-01 09:59:28,465:INFO:Visual Rendered Successfully
+2022-07-01 09:59:28,465:INFO:interpret_model() succesfully completed......................................
+2022-07-01 10:01:31,451:INFO:Initializing interpret_model()
+2022-07-01 10:01:31,451:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=years_exp_current_role, kwargs={}, observation=None, plot=correlation, save=False)
+2022-07-01 10:01:31,451:INFO:Checking exceptions
+2022-07-01 10:01:31,451:INFO:plot type: correlation
+2022-07-01 10:01:31,451:WARNING:feature value passed. Feature used for correlation plot: years_exp_current_role
+2022-07-01 10:01:31,451:INFO:Creating TreeExplainer
+2022-07-01 10:01:31,464:INFO:Compiling shap values
+2022-07-01 10:02:02,561:INFO:model type detected: type 2
+2022-07-01 10:02:02,739:INFO:Visual Rendered Successfully
+2022-07-01 10:02:02,739:INFO:interpret_model() succesfully completed......................................
+2022-07-01 10:03:49,491:INFO:Initializing interpret_model()
+2022-07-01 10:03:49,491:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=wage_deflacted, kwargs={}, observation=None, plot=correlation, save=False)
+2022-07-01 10:03:49,491:INFO:Checking exceptions
+2022-07-01 10:03:49,491:INFO:plot type: correlation
+2022-07-01 10:03:49,492:WARNING:feature value passed. Feature used for correlation plot: wage_deflacted
+2022-07-01 10:03:49,492:INFO:Creating TreeExplainer
+2022-07-01 10:03:49,503:INFO:Compiling shap values
+2022-07-01 10:04:20,264:INFO:model type detected: type 2
+2022-07-01 10:04:20,411:INFO:Visual Rendered Successfully
+2022-07-01 10:04:20,411:INFO:interpret_model() succesfully completed......................................
+2022-07-01 10:06:15,859:INFO:Initializing interpret_model()
+2022-07-01 10:06:15,859:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=PROFESION, kwargs={}, observation=None, plot=correlation, save=False)
+2022-07-01 10:06:15,859:INFO:Checking exceptions
+2022-07-01 10:06:15,859:INFO:plot type: correlation
+2022-07-01 10:06:15,859:WARNING:feature value passed. Feature used for correlation plot: PROFESION
+2022-07-01 10:06:15,859:INFO:Creating TreeExplainer
+2022-07-01 10:06:15,871:INFO:Compiling shap values
+2022-07-01 10:06:47,215:INFO:model type detected: type 2
+2022-07-01 10:07:25,720:INFO:Initializing interpret_model()
+2022-07-01 10:07:25,720:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=gender, kwargs={}, observation=None, plot=correlation, save=False)
+2022-07-01 10:07:25,721:INFO:Checking exceptions
+2022-07-01 10:07:25,721:INFO:plot type: correlation
+2022-07-01 10:07:25,721:WARNING:feature value passed. Feature used for correlation plot: gender
+2022-07-01 10:07:25,721:INFO:Creating TreeExplainer
+2022-07-01 10:07:25,733:INFO:Compiling shap values
+2022-07-01 10:07:56,291:INFO:model type detected: type 2
+2022-07-01 10:10:49,555:INFO:Initializing interpret_model()
+2022-07-01 10:10:49,555:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=pfi, save=False)
+2022-07-01 10:10:49,555:INFO:Checking exceptions
+2022-07-01 10:10:49,650:ERROR:interpret-community library not found. pip install interpret-community to generate pfi plot in interpret_model function.
+2022-07-01 10:15:03,953:INFO:Initializing load_config()
+2022-07-01 10:15:03,954:INFO:load_config(file_name=C:\Users\USUARIO\Documents\GitHub\Team_224\Proyecto\Models\model_selected_config)
+2022-07-01 10:15:03,964:INFO:Global variables loaded from C:\Users\USUARIO\Documents\GitHub\Team_224\Proyecto\Models\model_selected_config
+2022-07-01 10:15:03,964:INFO:Global variables set to match those in C:\Users\USUARIO\Documents\GitHub\Team_224\Proyecto\Models\model_selected_config
+2022-07-01 10:15:03,964:INFO:load_config() succesfully completed......................................
+2022-07-01 10:15:04,240:INFO:Initializing load_model()
+2022-07-01 10:15:04,241:INFO:load_model(model_name=C:\Users\USUARIO\Documents\GitHub\Team_224\Proyecto\Models\model_selected_pipeline, platform=None, authentication=None, verbose=True)
+2022-07-01 10:15:07,017:INFO:Initializing evaluate_model()
+2022-07-01 10:15:07,017:INFO:evaluate_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), fold=None, fit_kwargs=None, plot_kwargs=None, feature_name=None, groups=None, use_train_data=False)
+2022-07-01 10:15:07,063:INFO:Initializing plot_model()
+2022-07-01 10:15:07,063:INFO:plot_model(fold=KFold(n_splits=10, random_state=None, shuffle=False), use_train_data=False, verbose=True, is_in_evaluate=True, display=None, display_format=None, estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), feature_name=None, fit_kwargs={}, groups=None, label=False, plot=parameter, plot_kwargs={}, save=False, scale=1, system=True)
+2022-07-01 10:15:07,063:INFO:Checking exceptions
+2022-07-01 10:15:07,176:INFO:Preparing display monitor
+2022-07-01 10:15:07,176:INFO:Preloading libraries
+2022-07-01 10:15:07,197:INFO:Copying training dataset
+2022-07-01 10:15:07,198:INFO:Copying test dataset
+2022-07-01 10:15:07,198:INFO:Plot type: parameter
+2022-07-01 10:15:07,207:INFO:Visual Rendered Successfully
+2022-07-01 10:15:07,309:INFO:plot_model() succesfully completed......................................
+2022-07-01 10:15:13,770:INFO:Initializing interpret_model()
+2022-07-01 10:15:13,770:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=gender, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:15:13,770:INFO:Checking exceptions
+2022-07-01 10:15:13,799:INFO:plot type: pdp
+2022-07-01 10:15:13,799:INFO:Checking feature parameter passed
+2022-07-01 10:15:13,799:INFO:feature value passed. Feature used for correlation plot: gender
+2022-07-01 10:16:14,979:INFO:Initializing plot_model()
+2022-07-01 10:16:14,979:INFO:plot_model(fold=KFold(n_splits=10, random_state=None, shuffle=False), use_train_data=False, verbose=True, is_in_evaluate=True, display=None, display_format=None, estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), feature_name=None, fit_kwargs={}, groups=None, label=False, plot=feature, plot_kwargs={}, save=False, scale=1, system=True)
+2022-07-01 10:16:14,979:INFO:Checking exceptions
+2022-07-01 10:16:15,084:INFO:Preparing display monitor
+2022-07-01 10:16:15,089:INFO:Preloading libraries
+2022-07-01 10:16:15,106:INFO:Copying training dataset
+2022-07-01 10:16:15,107:INFO:Copying test dataset
+2022-07-01 10:16:15,107:INFO:Plot type: feature
+2022-07-01 10:16:15,108:WARNING:No coef_ found. Trying feature_importances_
+2022-07-01 10:16:15,366:INFO:Visual Rendered Successfully
+2022-07-01 10:16:15,482:INFO:plot_model() succesfully completed......................................
+2022-07-01 10:16:43,441:INFO:Initializing interpret_model()
+2022-07-01 10:16:43,441:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=home_type_PROPIA, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:16:43,441:INFO:Checking exceptions
+2022-07-01 10:16:43,442:INFO:plot type: pdp
+2022-07-01 10:16:43,442:INFO:Checking feature parameter passed
+2022-07-01 10:16:43,442:INFO:feature value passed. Feature used for correlation plot: home_type_PROPIA
+2022-07-01 10:17:18,297:INFO:Visual Rendered Successfully
+2022-07-01 10:17:18,297:INFO:interpret_model() succesfully completed......................................
+2022-07-01 10:18:27,071:INFO:Initializing interpret_model()
+2022-07-01 10:18:27,072:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=pfi, save=False)
+2022-07-01 10:18:27,072:INFO:Checking exceptions
+2022-07-01 10:18:27,126:ERROR:interpret-community library not found. pip install interpret-community to generate pfi plot in interpret_model function.
+2022-07-01 10:18:43,336:INFO:Initializing interpret_model()
+2022-07-01 10:18:43,336:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=None, kwargs={}, observation=None, plot=pfi, save=False)
+2022-07-01 10:18:43,336:INFO:Checking exceptions
+2022-07-01 10:18:43,336:ERROR:interpret-community library not found. pip install interpret-community to generate pfi plot in interpret_model function.
+2022-07-01 10:21:24,479:INFO:Initializing interpret_model()
+2022-07-01 10:21:24,479:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=home_type_FAMILIAR, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:21:24,479:INFO:Checking exceptions
+2022-07-01 10:21:24,479:INFO:plot type: pdp
+2022-07-01 10:21:24,479:INFO:Checking feature parameter passed
+2022-07-01 10:21:24,479:INFO:feature value passed. Feature used for correlation plot: home_type_FAMILIAR
+2022-07-01 10:21:58,578:INFO:Visual Rendered Successfully
+2022-07-01 10:21:58,578:INFO:interpret_model() succesfully completed......................................
+2022-07-01 10:22:14,864:INFO:Initializing interpret_model()
+2022-07-01 10:22:14,864:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=PROFESION_admin_servicios_salud, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:22:14,865:INFO:Checking exceptions
+2022-07-01 10:22:14,865:INFO:plot type: pdp
+2022-07-01 10:22:14,865:INFO:Checking feature parameter passed
+2022-07-01 10:22:14,865:INFO:feature value passed. Feature used for correlation plot: PROFESION_admin_servicios_salud
+2022-07-01 10:22:48,994:INFO:Visual Rendered Successfully
+2022-07-01 10:22:48,994:INFO:interpret_model() succesfully completed......................................
+2022-07-01 10:22:56,055:INFO:Initializing interpret_model()
+2022-07-01 10:22:56,055:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=PROFESION_asistente_administrativo, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:22:56,055:INFO:Checking exceptions
+2022-07-01 10:22:56,055:INFO:plot type: pdp
+2022-07-01 10:22:56,055:INFO:Checking feature parameter passed
+2022-07-01 10:22:56,056:INFO:feature value passed. Feature used for correlation plot: PROFESION_asistente_administrativo
+2022-07-01 10:23:30,987:INFO:Visual Rendered Successfully
+2022-07-01 10:23:30,987:INFO:interpret_model() succesfully completed......................................
+2022-07-01 10:25:07,584:INFO:Initializing interpret_model()
+2022-07-01 10:25:07,584:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=total_dependants_3.0, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:25:07,584:INFO:Checking exceptions
+2022-07-01 10:25:07,585:INFO:plot type: pdp
+2022-07-01 10:25:07,585:INFO:Checking feature parameter passed
+2022-07-01 10:25:07,585:INFO:feature value passed. Feature used for correlation plot: total_dependants_3.0
+2022-07-01 10:28:19,989:INFO:Initializing interpret_model()
+2022-07-01 10:28:19,989:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=home_type_ARRENDADA, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:28:19,989:INFO:Checking exceptions
+2022-07-01 10:28:19,989:INFO:plot type: pdp
+2022-07-01 10:28:19,989:INFO:Checking feature parameter passed
+2022-07-01 10:28:19,989:INFO:feature value passed. Feature used for correlation plot: home_type_ARRENDADA
+2022-07-01 10:28:54,167:INFO:Visual Rendered Successfully
+2022-07-01 10:28:54,167:INFO:interpret_model() succesfully completed......................................
+2022-07-01 10:30:10,702:INFO:Initializing interpret_model()
+2022-07-01 10:30:10,702:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=total_dependants_3, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:30:10,702:INFO:Checking exceptions
+2022-07-01 10:30:10,702:INFO:plot type: pdp
+2022-07-01 10:30:10,702:INFO:Checking feature parameter passed
+2022-07-01 10:30:10,702:INFO:feature value passed. Feature used for correlation plot: total_dependants_3
+2022-07-01 10:32:12,238:INFO:Initializing interpret_model()
+2022-07-01 10:32:12,238:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=total_dependants, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:32:12,238:INFO:Checking exceptions
+2022-07-01 10:32:12,238:INFO:plot type: pdp
+2022-07-01 10:32:12,238:INFO:Checking feature parameter passed
+2022-07-01 10:32:12,238:INFO:feature value passed. Feature used for correlation plot: total_dependants
+2022-07-01 10:33:34,366:INFO:Initializing interpret_model()
+2022-07-01 10:33:34,366:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=PROFESION_admin_servicios_salud, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:33:34,366:INFO:Checking exceptions
+2022-07-01 10:33:34,366:INFO:plot type: pdp
+2022-07-01 10:33:34,366:INFO:Checking feature parameter passed
+2022-07-01 10:33:34,366:INFO:feature value passed. Feature used for correlation plot: PROFESION_admin_servicios_salud
+2022-07-01 10:34:08,586:INFO:Visual Rendered Successfully
+2022-07-01 10:34:08,586:INFO:interpret_model() succesfully completed......................................
+2022-07-01 10:36:10,888:INFO:Initializing plot_model()
+2022-07-01 10:36:10,888:INFO:plot_model(fold=KFold(n_splits=10, random_state=None, shuffle=False), use_train_data=False, verbose=True, is_in_evaluate=True, display=None, display_format=None, estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), feature_name=None, fit_kwargs={}, groups=None, label=False, plot=residuals_interactive, plot_kwargs={}, save=False, scale=1, system=True)
+2022-07-01 10:36:10,888:INFO:Checking exceptions
+2022-07-01 10:36:11,004:INFO:Preparing display monitor
+2022-07-01 10:36:11,004:INFO:Preloading libraries
+2022-07-01 10:36:11,026:INFO:Copying training dataset
+2022-07-01 10:36:11,026:INFO:Copying test dataset
+2022-07-01 10:36:11,026:INFO:Plot type: residuals_interactive
+2022-07-01 10:36:11,293:INFO:Calculated model residuals
+2022-07-01 10:36:12,588:INFO:Calculated Tunkey-Anscombe Plot
+2022-07-01 10:36:12,737:INFO:Calculated Normal QQ Plot
+2022-07-01 10:36:12,984:INFO:Calculated Scale-Location Plot
+2022-07-01 10:36:13,332:INFO:Calculated Residual vs Leverage Plot inc. Cook's distance
+2022-07-01 10:36:13,454:INFO:Visual Rendered Successfully
+2022-07-01 10:36:13,587:INFO:plot_model() succesfully completed......................................
+2022-07-01 10:36:28,480:INFO:Initializing plot_model()
+2022-07-01 10:36:28,480:INFO:plot_model(fold=KFold(n_splits=10, random_state=None, shuffle=False), use_train_data=False, verbose=True, is_in_evaluate=True, display=None, display_format=None, estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), feature_name=None, fit_kwargs={}, groups=None, label=False, plot=residuals, plot_kwargs={}, save=False, scale=1, system=True)
+2022-07-01 10:36:28,480:INFO:Checking exceptions
+2022-07-01 10:36:28,592:INFO:Preparing display monitor
+2022-07-01 10:36:28,592:INFO:Preloading libraries
+2022-07-01 10:36:28,613:INFO:Copying training dataset
+2022-07-01 10:36:28,614:INFO:Copying test dataset
+2022-07-01 10:36:28,614:INFO:Plot type: residuals
+2022-07-01 10:36:28,695:INFO:Fitting Model
+2022-07-01 10:36:28,942:INFO:Scoring test/hold-out set
+2022-07-01 10:36:29,602:INFO:Visual Rendered Successfully
+2022-07-01 10:36:29,742:INFO:plot_model() succesfully completed......................................
+2022-07-01 10:37:39,095:INFO:Initializing plot_model()
+2022-07-01 10:37:39,096:INFO:plot_model(fold=KFold(n_splits=10, random_state=None, shuffle=False), use_train_data=False, verbose=True, is_in_evaluate=True, display=None, display_format=None, estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), feature_name=None, fit_kwargs={}, groups=None, label=False, plot=error, plot_kwargs={}, save=False, scale=1, system=True)
+2022-07-01 10:37:39,096:INFO:Checking exceptions
+2022-07-01 10:37:39,214:INFO:Preparing display monitor
+2022-07-01 10:37:39,214:INFO:Preloading libraries
+2022-07-01 10:37:39,235:INFO:Copying training dataset
+2022-07-01 10:37:39,235:INFO:Copying test dataset
+2022-07-01 10:37:39,235:INFO:Plot type: error
+2022-07-01 10:37:39,236:INFO:Fitting Model
+2022-07-01 10:37:39,237:INFO:Scoring test/hold-out set
+2022-07-01 10:37:39,618:INFO:Visual Rendered Successfully
+2022-07-01 10:37:39,740:INFO:plot_model() succesfully completed......................................
+2022-07-01 10:37:41,781:INFO:Initializing plot_model()
+2022-07-01 10:37:41,782:INFO:plot_model(fold=KFold(n_splits=10, random_state=None, shuffle=False), use_train_data=False, verbose=True, is_in_evaluate=True, display=None, display_format=None, estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), feature_name=None, fit_kwargs={}, groups=None, label=False, plot=feature, plot_kwargs={}, save=False, scale=1, system=True)
+2022-07-01 10:37:41,782:INFO:Checking exceptions
+2022-07-01 10:37:41,891:INFO:Preparing display monitor
+2022-07-01 10:37:41,891:INFO:Preloading libraries
+2022-07-01 10:37:41,913:INFO:Copying training dataset
+2022-07-01 10:37:41,914:INFO:Copying test dataset
+2022-07-01 10:37:41,914:INFO:Plot type: feature
+2022-07-01 10:37:41,915:WARNING:No coef_ found. Trying feature_importances_
+2022-07-01 10:37:42,126:INFO:Visual Rendered Successfully
+2022-07-01 10:37:42,262:INFO:plot_model() succesfully completed......................................
+2022-07-01 10:38:14,917:INFO:Initializing interpret_model()
+2022-07-01 10:38:14,918:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=gender_FEMALE, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:38:14,918:INFO:Checking exceptions
+2022-07-01 10:38:14,918:INFO:plot type: pdp
+2022-07-01 10:38:14,918:INFO:Checking feature parameter passed
+2022-07-01 10:38:14,918:INFO:feature value passed. Feature used for correlation plot: gender_FEMALE
+2022-07-01 10:38:57,909:INFO:Initializing interpret_model()
+2022-07-01 10:38:57,909:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=gender, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:38:57,909:INFO:Checking exceptions
+2022-07-01 10:38:57,910:INFO:plot type: pdp
+2022-07-01 10:38:57,910:INFO:Checking feature parameter passed
+2022-07-01 10:38:57,910:INFO:feature value passed. Feature used for correlation plot: gender
+2022-07-01 10:41:17,678:INFO:Initializing interpret_model()
+2022-07-01 10:41:17,678:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=total_dependants, kwargs={}, observation=None, plot=correlation, save=False)
+2022-07-01 10:41:17,678:INFO:Checking exceptions
+2022-07-01 10:41:17,736:INFO:plot type: correlation
+2022-07-01 10:41:17,736:WARNING:feature value passed. Feature used for correlation plot: total_dependants
+2022-07-01 10:41:17,737:INFO:Creating TreeExplainer
+2022-07-01 10:41:17,745:INFO:Compiling shap values
+2022-07-01 10:41:48,559:INFO:model type detected: type 2
