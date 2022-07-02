@@ -1,7 +1,5 @@
 .bigtextgray {font-size:3em; font-weight: bold;color: darkgrey; }
 
-
-
 .card {
     #min-height:100px;
     border-width: 0;
@@ -13,6 +11,7 @@
 
 
 }
+
 .card2 {
     #min-height:100px;
     border-width: 0;
@@ -24,6 +23,12 @@
     text-align: center;
 
 }
+
+#title{
+    text-align: center;
+}
+
+
 .card-title {
     font-weight: 700;
     color: #1c273c;
