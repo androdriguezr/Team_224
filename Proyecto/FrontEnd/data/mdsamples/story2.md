@@ -1,0 +1,1 @@
+Optimizar el proceso de reclutamiento y selección de personal de atención al público en Instituciones Prestadoras de Servicios de Salud del departamento de Córdoba, identificando factores sociodemográficos que garanticen alta productividad en el personal contratado para el cargo "gestor de salud".
