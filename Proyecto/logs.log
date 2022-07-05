@@ -515,3 +515,128 @@
 2022-07-01 10:41:17,737:INFO:Creating TreeExplainer
 2022-07-01 10:41:17,745:INFO:Compiling shap values
 2022-07-01 10:41:48,559:INFO:model type detected: type 2
+2022-07-01 10:56:10,080:INFO:Initializing interpret_model()
+2022-07-01 10:56:10,080:INFO:interpret_model(estimator=PowerTransformedTargetRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                                max_depth=None, max_features='auto',
+                                max_leaf_nodes=None, max_samples=None,
+                                min_impurity_decrease=0.0,
+                                min_impurity_split=None, min_samples_leaf=1,
+                                min_samples_split=2,
+                                min_weight_fraction_leaf=0.0, n_estimators=100,
+                                n_jobs=-1, oob_score=False, random_state=1229,
+                                regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                              random_state=1229),
+                                verbose=0, warm_start=False), use_train_data=False, X_new_sample=None, y_new_sample=None, feature=PROFESION_agente_call_center, kwargs={}, observation=None, plot=pdp, save=False)
+2022-07-01 10:56:10,080:INFO:Checking exceptions
+2022-07-01 10:56:10,080:INFO:plot type: pdp
+2022-07-01 10:56:10,080:INFO:Checking feature parameter passed
+2022-07-01 10:56:10,080:INFO:feature value passed. Feature used for correlation plot: PROFESION_agente_call_center
+2022-07-01 10:56:44,422:INFO:Visual Rendered Successfully
+2022-07-01 10:56:44,422:INFO:interpret_model() succesfully completed......................................
+2022-07-03 10:26:33,270:INFO:Initializing load_model()
+2022-07-03 10:26:33,271:INFO:load_model(model_name=C:\Users\USUARIO\Documents\GitHub\Team_224\Proyecto\Models\model_selected_pipeline, platform=None, authentication=None, verbose=True)
+2022-07-03 10:26:53,794:INFO:Initializing predict_model()
+2022-07-03 10:26:53,794:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['gender',
+                                                            'is_special_population',
+                                                            'any_disability',
+                                                            'MUNICIPIO_DE_RESIDENCIA',
+                                                            'home_type',
+                                                            'education_level',
+                                                            'marital_status',
+                                                            'PROFESION',
+                                                            'total_depedants',
+                                                            'ESTRATO_SOCIAL'],
+                                      ml_usecase='regression',
+                                      target='request_attend_per_day')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_...
+                                                 criterion='mse',
+                                                 max_depth=None,
+                                                 max_features='auto',
+                                                 max_leaf_nodes=None,
+                                                 max_samples=None,
+                                                 min_impurity_decrease=0.0,
+                                                 min_impurity_split=None,
+                                                 min_samples_leaf=1,
+                                                 min_samples_split=2,
+                                                 min_weight_fraction_leaf=0.0,
+                                                 n_estimators=100, n_jobs=-1,
+                                                 oob_score=False,
+                                                 random_state=1229,
+                                                 regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                                               random_state=1229),
+                                                 verbose=0,
+                                                 warm_start=False)]]), probability_threshold=None, encoded_labels=True, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None, drift_kwargs=None)
+2022-07-03 10:26:53,794:INFO:Checking exceptions
+2022-07-03 10:26:53,794:INFO:Preloading libraries
+2022-07-03 10:30:49,747:INFO:Initializing predict_model()
+2022-07-03 10:30:49,747:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['gender',
+                                                            'is_special_population',
+                                                            'any_disability',
+                                                            'MUNICIPIO_DE_RESIDENCIA',
+                                                            'home_type',
+                                                            'education_level',
+                                                            'marital_status',
+                                                            'PROFESION',
+                                                            'total_depedants',
+                                                            'ESTRATO_SOCIAL'],
+                                      ml_usecase='regression',
+                                      target='request_attend_per_day')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_...
+                                                 criterion='mse',
+                                                 max_depth=None,
+                                                 max_features='auto',
+                                                 max_leaf_nodes=None,
+                                                 max_samples=None,
+                                                 min_impurity_decrease=0.0,
+                                                 min_impurity_split=None,
+                                                 min_samples_leaf=1,
+                                                 min_samples_split=2,
+                                                 min_weight_fraction_leaf=0.0,
+                                                 n_estimators=100, n_jobs=-1,
+                                                 oob_score=False,
+                                                 random_state=1229,
+                                                 regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                                               random_state=1229),
+                                                 verbose=0,
+                                                 warm_start=False)]]), probability_threshold=None, encoded_labels=True, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None, drift_kwargs=None)
+2022-07-03 10:30:49,748:INFO:Checking exceptions
+2022-07-03 10:30:49,748:INFO:Preloading libraries
+2022-07-03 10:31:12,938:INFO:Initializing predict_model()
+2022-07-03 10:31:12,938:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=['gender',
+                                                            'is_special_population',
+                                                            'any_disability',
+                                                            'MUNICIPIO_DE_RESIDENCIA',
+                                                            'home_type',
+                                                            'education_level',
+                                                            'marital_status',
+                                                            'PROFESION',
+                                                            'total_depedants',
+                                                            'ESTRATO_SOCIAL'],
+                                      ml_usecase='regression',
+                                      target='request_attend_per_day')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_...
+                                                 criterion='mse',
+                                                 max_depth=None,
+                                                 max_features='auto',
+                                                 max_leaf_nodes=None,
+                                                 max_samples=None,
+                                                 min_impurity_decrease=0.0,
+                                                 min_impurity_split=None,
+                                                 min_samples_leaf=1,
+                                                 min_samples_split=2,
+                                                 min_weight_fraction_leaf=0.0,
+                                                 n_estimators=100, n_jobs=-1,
+                                                 oob_score=False,
+                                                 random_state=1229,
+                                                 regressor=ExtraTreesRegressor(n_jobs=-1,
+                                                                               random_state=1229),
+                                                 verbose=0,
+                                                 warm_start=False)]]), probability_threshold=None, encoded_labels=True, drift_report=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.REGRESSION, display=None, drift_kwargs=None)
+2022-07-03 10:31:12,938:INFO:Checking exceptions
+2022-07-03 10:31:12,938:INFO:Preloading libraries
