@@ -10,7 +10,7 @@ layout=  dbc.Container(
         ]),
         dbc.Row([dbc.NavItem(dbc.NavLink("Modelo", href="/modelo"),className= "card2")
         ]),
-        dbc.Row([dbc.NavItem(dbc.NavLink("Dashboard", href="/dashboard"),className= "card2")
+        dbc.Row([dbc.NavItem(dbc.NavLink("Dashboard", href="/Dashboard"),className= "card2")
         ]),
         dbc.Row([ html.Img(src='/assets/logo.png',className="img-fluid")],  className = "card")
     ]

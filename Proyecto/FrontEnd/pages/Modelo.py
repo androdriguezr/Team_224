@@ -32,12 +32,12 @@ from os import *
 
 register_page(__name__, path="/modelo")
 
-os.chdir(r"C:\Users\juliandnp\Downloads\dash-template-repo-master")
+os.chdir(r"C:\Users\relat\Documents\GitHub\Team_224\Proyecto\Frontend")
 all_data_final_model=load_model('model_selected_pipeline')
 
 load_model('model_selected_pipeline')
 
-ruta_madre="C:/Users/juliandnp/Downloads/dash-template-repo-master/data"
+ruta_madre="C:/Users/relat/Documents/GitHub/Team_224/Proyecto/Frontend/data"
 ruta_data_preproc=os.path.join(ruta_madre,'data_master_ready_to_model.xlsx')
 datos_to_model=pd.read_excel(ruta_data_preproc,index_col=0)
 
@@ -80,7 +80,7 @@ layout = html.Div(
         html.Br(),
         dbc.Container([dbc.Input(id="salida", placeholder=""),]),  
         html.Br(),
-        dbc.Button("Ingresar Dashboard", id="btndashboard",href="/dashboard", n_clicks=0,),   
+        dbc.Button("Ingresar Dashboard", id="btndashboard",href="/Dashboard", n_clicks=0,),   
         html.Br(),
     ],style={'textAlign': 'center' , "margin-left": "15%", "margin-right": "15%", "margin-bottom": "5%"}
 )
