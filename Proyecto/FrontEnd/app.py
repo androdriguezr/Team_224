@@ -27,7 +27,7 @@ navbar = dbc.NavbarSimple([
         label="Estructura",
     ),
     ],
-    brand="MEDICINA INTEGRAL",
+    brand="Medicina Integral",
     color="primary",
     dark=True,
     className="mb-2",

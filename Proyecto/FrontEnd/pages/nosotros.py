@@ -12,5 +12,4 @@ layout = dbc.Row([
         dbc.Row([
         html.Img(src='/assets/nosotros.PNG',className="img-fluid")
     ],  className = "d-flex align-items-center display-6 justify-content-start")
-
 ])
