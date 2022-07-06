@@ -15,10 +15,10 @@ from datetime import datetime
 import math
 import unicodedata
 from unicodedata import normalize
-import re
+#import re
 from dateutil.relativedelta import relativedelta
 import pingouin
-import sklearn
+#import sklearn
 from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer
 from sklearn.impute import KNNImputer
@@ -28,16 +28,19 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import statsmodels.formula.api as smf
 from pycaret.classification import *
-from os import *
+#from os import *
 
 register_page(__name__, path="/modelo")
 
-os.chdir(r"C:\Users\relat\Documents\GitHub\Team_224\Proyecto\Frontend")
+#os.chdir(r"C:\Users\relat\Documents\GitHub\Team_224\Proyecto\Frontend")
+#os.chdir(r"./Frontend")
+
 all_data_final_model=load_model('model_selected_pipeline')
 
 load_model('model_selected_pipeline')
 
-ruta_madre="C:/Users/relat/Documents/GitHub/Team_224/Proyecto/Frontend/data"
+#ruta_madre="C:/Users/relat/Documents/GitHub/Team_224/Proyecto/Frontend/data"
+ruta_madre="./data"
 ruta_data_preproc=os.path.join(ruta_madre,'data_master_ready_to_model.xlsx')
 datos_to_model=pd.read_excel(ruta_data_preproc,index_col=0)
 
@@ -50,7 +53,8 @@ layout = html.Div(
         html.Div(children=[dbc.Row(dbc.Col(html.H5("Edad"),width={"size": 8, "offset": 2}))]),
         html.Div([dcc.Dropdown([18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65], 'EDAD', id='edad-dropdown'),]),
         html.H5("Genero"),
-        html.Div([dcc.Dropdown(['MALE', 'FEMALE','OTHER'], 'GENERO', id='genero-dropdown'), ]),
+        #html.Div([dcc.Dropdown(['MALE', 'FEMALE','OTHER'], 'GENERO', id='genero-dropdown'), ]),
+        html.Div([dcc.Dropdown(options=[{'label':'Masculino', 'value':'MALE'}], id='genero-dropdown'), ]),
         html.H5("Población especial"),
         html.Div([dcc.Dropdown(['NO APLICA', 'MADRE CABEZA DE FAMILIA','DESPLAZADO','VICTIVA CONFLICTO ARMADO', 'MUJER GESTANTE'], 'Población Especial', id='poblacion-dropdown')]),
         html.H5("Alguna discapacidad"),
@@ -103,6 +107,7 @@ layout = html.Div(
         ],prevent_initial_call=True
     )
 def update_sal(edad,genero, poblacion, dis, mun, casa, nivel, pro, estadociv, dep,estrato,yearsrol, nclicks):
+#def update_sal(edad,genero, poblacion, mun, casa, nivel, pro, estadociv, dep,estrato,yearsrol, nclicks):
             new_data=datos_to_model.iloc[[0,]].copy()
             new_data=new_data.drop(columns='request_attend_per_day')
             new_data['age']=float(edad)
@@ -126,12 +131,13 @@ def update_sal(edad,genero, poblacion, dis, mun, casa, nivel, pro, estadociv, de
             prediction2=float(prediction.Label)
 
             a=0
-            if prediction2>=float(25) :
-                a= ' Excelente perfil. contrátalo'
-            elif (prediction2<float(25) and prediction2 >=float(17)):
-                a= ' Es un perfil sobresaliente. contrátalo'
-            elif (prediction2<float(17) and prediction2 >= float(11) ):
-                a= ' Es un perfil estandar. podrías con periodo de prueba'
+            if prediction2>=float(33) :
+                a= 'Excelente perfil. Se sugiere tener en cuenta este perfil'
+            elif (prediction2<float(33) and prediction2 >=float(25)):
+                a= 'Es un perfil sobresaliente. Se sugiere tener en cuenta este perfil'
+            elif (prediction2<float(25) and prediction2 >= float(17)):
+                a= 'Es un perfil estandar. Se sugiere tener en cuenta este perfil en periodo de prueba'
             else:
-                a=  ' No es tan productivo. ten cuidado'
-            return str(prediction2) , a
+                a= 'Bajo creterios del modelamiento, no se recomienda tener en cuenta este perfil'
+                
+            return a

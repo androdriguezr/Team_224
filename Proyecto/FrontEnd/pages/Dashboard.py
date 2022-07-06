@@ -2,8 +2,6 @@
 from tkinter import font
 from dash import html , dcc, callback, Input, Output, State
 import dash_bootstrap_components as dbc
-import dash_html_components as html
-import dash_core_components as dcc
 from dash.dependencies import Input, Output
 from dash_labs.plugins.pages import register_page
 import plotly.express as px
@@ -14,9 +12,6 @@ import os
 register_page(__name__, path="/Dashboard")
 
 from components.df.df_dashboard import df, df2, df3
-
-
-#df = px.data.medals_wide(indexed=True)
 
 # specific layout for this page
 layout = dbc.Container([

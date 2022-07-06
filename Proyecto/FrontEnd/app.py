@@ -2,7 +2,7 @@
 import dash
 import dash_labs as dl
 import dash_bootstrap_components as dbc
-
+import os
 from callbacks import register_callbacks
 
 # Dash instance declaration
@@ -50,5 +50,10 @@ register_callbacks(app)
 server = app.server
 
 # Testing server, don't use in production, host
+# if __name__ == "__main__":
+#     app.run(host='0.0.0.0', port=8050, debug=True)
+
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8050, debug=True)
+    port = os.environ.get('dash_port')
+    debug = os.environ.get('dash_debug')
+    app.run_server(debug=False, host="0.0.0.0", port=80)
