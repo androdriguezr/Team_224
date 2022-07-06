@@ -16,7 +16,7 @@ from components.df.df_dashboard import df, df2, df3
 # specific layout for this page
 layout = dbc.Container([
         dbc.Row([
-            dbc.Col(html.H3('Informe de productividad gestores de salud año 2022',  className='text-center text-primary, mb-4', style={'color':'#0380C4'}),
+            dbc.Col(html.H2('Informe de productividad gestores de salud año 2022',  className='text-center text-primary, mb-4', style={'color':'#0380C4'}),
             width=12)
             ]),
 
@@ -57,20 +57,21 @@ layout = dbc.Container([
                                    for x in sorted(df['MES'].unique())],
                           labelClassName='mr-4'),
                 dcc.Graph(id='my-hist', figure={})], 
-                         # width={'size':5, 'offset':1}
-                          xs=12, sm=12, md=12, lg=5, xl=5),
+                          width={'size':5, 'offset':1})
+                          #xs=12, sm=12, md=12, lg=5, xl=5),
                 
-                dbc.Col([
-                     dbc.Card([
-                    dbc.CardBody(
-                        html.P("We're better together. Help each other out!", className="card-text")),
-                    dbc.CardImg(src="https://giphy.com/gifs/power-starz-season6-episode610-VIoUim5M9qMu22BarJ", bottom=True)],style={"width": "24rem"})
 
-                        ], 
-                        #width={'size':5, 'offset':1})
-                        xs=12, sm=12, md=12, lg=5, xl=5),
 
                 ],align='center', justify='center'),
+
+
+# Esto es para generar espacio entre el logo y el Dashboard 
+    dbc.Row([
+        dbc.Col([html.Div(),], className = 'p-5'),
+        ]),
+    dbc.Row([
+        dbc.Col([html.Div(),], className = 'p-5'),
+        ]),
 
 
 ], fluid=True)

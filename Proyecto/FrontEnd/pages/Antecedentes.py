@@ -19,7 +19,7 @@ layout = dbc.Container(
     [
         dbc.Row([
             dbc.Col([
-                 html.H1(['Perfilamiento del personal en el proceso de atención al usuario para futuros procesos de selección'],id="div_title_maps"),
+                 html.H2(['Perfilamiento del personal en el proceso de atención al usuario para futuros procesos de selección'],id="div_title_maps", style={'textAlign': 'center', 'color':'#0380C4'}),
                  html.Hr()
             ], lg=12), 
         ]),

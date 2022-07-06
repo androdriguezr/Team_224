@@ -7,9 +7,20 @@ register_page(__name__, path="/nosotros")
 
 layout = dbc.Row([
     dbc.Col([
-        dbc.Row(["DS4A Project - Team 224"], className= "flex-fill ")
+        dbc.Row(["DS4A Project - Team 224"], className= "flex-fill ", style={'textAlign': 'center', 'color':'#0380C4'})
     ], className = "d-flex display-4 align-self-center flex-column align-items-center"),
         dbc.Row([
         html.Img(src='/assets/nosotros.PNG',className="img-fluid")
-    ],  className = "d-flex align-items-center display-6 justify-content-start")
+    ],  className = "d-flex align-items-center display-6 justify-content-start"),
+
+
+    dbc.Row([
+        dbc.Col([html.Div(),], className = 'p-5'),
+        ]),
+    dbc.Row([
+        dbc.Col([html.Div(),], className = 'p-5'),
+        ]),
+
 ])
+
+
