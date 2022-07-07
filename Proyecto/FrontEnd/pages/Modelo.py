@@ -55,9 +55,9 @@ layout = html.Div(
         html.H5("Edad (en años)"),
         html.Div([dcc.Dropdown([18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65], id='edad-dropdown'),]),
         
-        html.H5("Genero"),
+        html.H5("Género"),
         html.Div([dcc.Dropdown(options=[{'label':'Masculino', 'value':'MALE'}, 
-                                        {'label':'Femenito', 'value':'FEMALE'},
+                                        {'label':'Femenino', 'value':'FEMALE'},
                                         {'label':'No registra', 'value':'OTHER'}], id='genero-dropdown'), ]),
         html.H5("Población especial"),
         html.Div([dcc.Dropdown(options=[{'label':'No aplica', 'value':'NO APLICA'},
@@ -68,7 +68,7 @@ layout = html.Div(
 
         html.H5("Alguna discapacidad"),
         html.Div([dcc.Dropdown(options=[{'label':'No', 'value':'NO'},
-                                        {'label':'No reporta', 'value':'no_reported'}], id='dis-dropdown')]),  
+                                      {'label':'No reporta', 'value':'no_reported'}], id='dis-dropdown')]),  
         
        
         html.H5("Municipio de residencia"),
@@ -161,8 +161,8 @@ layout = html.Div(
         Input("btncalcular", "n_clicks"),
         ],prevent_initial_call=True
     )
-def update_sal(edad,genero, poblacion, dis, mun, casa, nivel, pro, estadociv, dep,estrato,yearsrol, nclicks):
-#def update_sal(edad,genero, poblacion, mun, casa, nivel, pro, estadociv, dep,estrato,yearsrol, nclicks):
+def update_sal(edad,genero, poblacion,dis, mun, casa, nivel, pro, estadociv, dep,estrato,yearsrol, nclicks):
+#def update_sal(edad,genero, poblacion, dis, mun, casa, nivel, pro, estadociv, dep,estrato,yearsrol, nclicks):
             new_data=datos_to_model.iloc[[0,]].copy()
             new_data=new_data.drop(columns='request_attend_per_day')
             new_data['age']=float(edad)
