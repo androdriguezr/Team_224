@@ -1,9 +1,8 @@
-#libraries
 from dash import html
 import dash_bootstrap_components as dbc
 from dash_labs.plugins.pages import register_page
 
-# dash-labs plugin call, menu name and route
+
 register_page(__name__, path="/antecedentes")
 
 from components.markdown.markformat import markformat
@@ -14,7 +13,6 @@ file2 = open('./data/mdsamples/story2.md',encoding='utf-8')
 texto1  = markformat('Problemática', file1.read())
 texto2  = markformat('Objetivos', file2.read())
 
-# specific layout for this page
 layout = dbc.Container(
     [
         dbc.Row([

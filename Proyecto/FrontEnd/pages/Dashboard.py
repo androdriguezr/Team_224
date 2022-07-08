@@ -1,4 +1,3 @@
-#libraries
 from tkinter import font
 from dash import html , dcc, callback, Input, Output, State, dash_table, no_update
 import dash_bootstrap_components as dbc
@@ -14,7 +13,6 @@ register_page(__name__, path="/Dashboard")
 
 from components.df.df_dashboard import df, df2, df3, df4, df5
 
-# specific layout for this page
 layout = dbc.Container([
         dbc.Row([
             dbc.Col(html.H2('Informe de productividad gestores de salud año 2022',  className='text-center text-primary, mb-4', style={'color':'#0380C4'}),
@@ -126,21 +124,17 @@ layout = dbc.Container([
         
 
 
-# Esto es para generar espacio entre el logo y el Dashboard 
+
     dbc.Row([
         dbc.Col([html.Div(),], className = 'p-5'),
         ]),
-    # dbc.Row([
-    #     dbc.Col([html.Div(),], className = 'p-5'),
-    #     ]),
+
 
 
 ], fluid=True)
 
 
-# Callback section: connecting the components
-# ************************************************************************
-# Line chart - Single
+# Grafica de linea
 @callback(Output('line-fig', 'figure'),
     Input('my-dpdn', 'value')
 )
@@ -152,7 +146,7 @@ def update_graph(stock_slctd):
 
 
 
-# Pie chart - multiple
+# Grafica de torta
 @callback(
     Output('pie-fig1', 'figure'),
     Input('my-dpdn2', 'value')
@@ -160,12 +154,11 @@ def update_graph(stock_slctd):
 def update_graph(stock_slctd):
     dff = df3.loc[df3['ORIGEN'].isin(stock_slctd)]
     dff.rename(columns={'MES':'Mes','Solicitud': 'Numero de solicitudes'}, inplace=True)
-    #figln2 = px.bar(dff, x='Mes', y='Numero de solicitudes', color='ORIGEN',barmode="group")
     figln2 = px.pie(dff, values='Numero de solicitudes', names='ORIGEN')
     return figln2
 
 
-# Histogram1
+# Histograma 1
 @callback(
     Output('my-hist', 'figure'),
     Input('my-checklist', 'value')
@@ -177,7 +170,7 @@ def update_graph(stock_slctd):
     fighist = px.histogram(dff.sort_values(by='Numero de solicitudes', ascending=False).head(10), x='Nombre del gestor', y='Numero de solicitudes',color_discrete_sequence=['#5D8AA8'],opacity=0.8)
     return fighist
 
-# Histogram2
+# Histograma 2
 @callback(
     Output('my-hist2', 'figure'),
     Input('my-checklist2', 'value')
@@ -186,6 +179,5 @@ def update_graph(stock_slctd):
     dff = df4[df4['MES'].isin(stock_slctd)]
     dff.rename(columns={'MES':'Mes','Solicitud': 'Numero de solicitudes', 'NOMBRE_USUARIO': 'Nombre del gestor' ,'ORIGEN': 'Origen de la solicitud'}, inplace=True)
     dff.sort_values(by='Numero de solicitudes')
-    #fighist = px.histogram(dff.sort_values(by='Numero de solicitudes', ascending=False), x='Nombre del gestor', y='Numero de solicitudes', color='Origen de la solicitud',opacity=0.8)
     fighist = px.histogram(dff.sort_values(by='Numero de solicitudes', ascending=False), x='Origen de la solicitud', y='Numero de solicitudes',color='Origen de la solicitud',opacity=0.8)
     return fighist

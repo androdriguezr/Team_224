@@ -1,4 +1,3 @@
-#libraries
 import dash
 from dash import html
 import dash_labs as dl
@@ -39,7 +38,7 @@ footer = dbc.Row([
             ], justify='center')
 
 
-#Main layout
+
 app.layout = dbc.Container(
     [
         navbar,
